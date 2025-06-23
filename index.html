@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeteoTrust - Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MeteoTrust Italia</h1>
+            <div class="date-display" id="currentDate"></div>
+            <div class="location-selector">
+                <input type="text" class="location-input" placeholder="🔍write here the city name..." id="cityInput">
+            </div>
+        </header>
+        
+        <div class="weather-main">
+            <div class="current-weather" id="sapocroch">
+              <div  id="normale">Milano</div>
+                <div class="weather-icon" id="currentIcon">☀️</div>
+                <div class="temperature" id="currentTemp">23°C</div>
+                <div class="weather-description" id="weatherDesc">Sunny</div>
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Humidity</div>
+                        <div class="detail-value" id="humidity">65%</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Wind</div>
+                        <div class="detail-value" id="windSpeed">12 km/h</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Pressure</div>
+                        <div class="detail-value" id="pressure">1013 hPa</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Visibility</div>
+                        <div class="detail-value" id="visibility">10 km</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="forecast-section">
+            <h2 class="forecast-title">Forecasts</h2>
+            <div class="forecast-toggle">
+                <button class="toggle-btn active" onclick="showForecast('daily')">Daily</button>
+                <button class="toggle-btn" onclick="showForecast('hourly')">Hours</button>
+            </div>
+            <div class="forecast-grid" id="forecastGrid">
+                <!-- Previsioni giornaliere di default -->
+                <div class="forecast-item">
+                    <div class="forecast-time">Today</div>
+                    <div class="forecast-icon">☀️</div>
+                    <div class="forecast-temp">23°/15°</div>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-time">Sun</div>
+                    <div class="forecast-icon">⛅</div>
+                    <div class="forecast-temp">21°/14°</div>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-time">Mon</div>
+                    <div class="forecast-icon">🌧️</div>
+                    <div class="forecast-temp">18°/12°</div>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-time">Tue</div>
+                    <div class="forecast-icon">⛈️</div>
+                    <div class="forecast-temp">16°/10°</div>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-time">Wed</div>
+                    <div class="forecast-icon">🌤️</div>
+                    <div class="forecast-temp">20°/13°</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="map-section">
+            <h2 class="forecast-title">Italy Map</h2>
+            <div class="map-placeholder">
+                🗺️ Interactive Weather Map
+            </div>
+            <div class="weather-legend">
+                <div class="legend-item">
+                    <span>☀️</span>
+                    <span>Sun</span>
+                </div>
+                <div class="legend-item">
+                    <span>⛅</span>
+                    <span>Cloudy</span>
+                </div>
+                <div class="legend-item">
+                    <span>🌧️</span>
+                    <span>Rain</span>
+                </div>
+                <div class="legend-item">
+                    <span>❄️</span>
+                    <span>Snow</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
